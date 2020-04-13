@@ -11,6 +11,7 @@ header {
     overflow: hidden;
     top: 0;
     width: 100%;
+    height: 50px;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -27,15 +28,20 @@ nav a:hover {
 #welcome-section {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    height: 350px;
-    padding: 90px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 0;
+    margin-top: 0;
+    display: block;
+    height: 100vh;
+}
+.welcome-text-container {
+    text-align: center;
 }
 #welcome-section h1 {
     color: #fff;
-    text-align: left;
     font-size: 100px;
     margin-bottom: -25px;
+    padding-top: 80px;
 }
 #welcome-section h2 {
     color: #00d4ff;
@@ -47,24 +53,32 @@ nav a:hover {
 
 #projects {
     display: flex;
-    justify-content: space-evenly;
-    height: 300px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.project-title {
-    text-align: center;
-    font-size: 19px;
-    margin-bottom: -17px;
-    font-weight: 400;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+   padding: 50px;
+    
 }
 .project-tile {
     background-color: #00d4ff;
     padding: 20px;
+    width: 30%;
+    text-align: center;
+    margin: 40px;
 }
+
+.project-header {
+    font-size: 19px;
+    margin-bottom: -17px;
+    font-weight: 400;
+}
+
 #projects img {
     margin-top: 40px;
-    max-width: 250px;
+    max-width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -80,4 +94,23 @@ nav a:hover {
 .fa-codepen:hover {
     color: #00d4ff;
     font-size: 60px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 780px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav a {
+        font-size: 95%;
+    }
+
+    #projects {
+        width: 85%;
+        justify-content: center;
+    }
+
+    .project-tile {
+       width: 100%;
+    }
+    
 }
